@@ -36,7 +36,7 @@
                 pfetch
 	    '';
             shellAliases = {
-                nixos-update = "nix flake update ~/nixos";
+                nix-update = "nix flake update";
             };
         };
     };

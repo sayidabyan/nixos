@@ -480,6 +480,10 @@
           # brightness control
           ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
           ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
+
+          # keyboard backlit
+          "$mainMod, XF86MonBrightnessUp, exec, brightnessctl -d kbd_backlight s +20"
+          "$mainMod, XF86MonBrightnessDown, exec,  brightnessctl -d kbd_backlight s 20-"
         ];
         windowrulev2 = [
           "tile,class:^(kitty)$"

@@ -23,5 +23,13 @@
     enable = true;
     settings.General.EnableNetworkConfugiration = true;
   };
+  
+  home-manager.users.sayid = {...}:
+  {
+    home.packages = with pkgs; [
+      telegram-desktop
+    ];
+  };
+  
 }
 
