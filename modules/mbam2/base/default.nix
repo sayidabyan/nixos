@@ -9,6 +9,11 @@
   boot.loader.efi.canTouchEfiVariables = false;
   hardware.asahi.peripheralFirmwareDirectory = ./firmware;
   
+  boot = {
+    consoleLogLevel = 0;
+    kernelParams = [ "apple_dcp.show_notch=1" ];
+  };
+
   hardware.graphics = {
     enable = true;
   };

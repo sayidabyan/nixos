@@ -12,7 +12,7 @@
     wayland.windowManager.hyprland = {
       settings = {
         monitor = [
-          "eDP-1, 2560x1600@60, 0x0, 2"
+          "eDP-1, 2560x1664@60, 0x0, 2"
         ];
         "$mainMod" = "SUPER";
         "$mainMod2" = "ALT";
