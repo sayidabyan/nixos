@@ -113,7 +113,7 @@
           margin-left = 0;
           margin-right = 0;
           modules-left = [ "custom/left" "custom/launcher" "hyprland/workspaces" "custom/right"];
-          modules-center = ["custom/altLeft" "hyprland/window" "custom/altRight"];
+          # modules-center = ["custom/altLeft" "hyprland/window" "custom/altRight"];
           modules-right = ["custom/left" "tray" "bluetooth" "pulseaudio" "battery" "cpu" "memory" "clock" "custom/right"];
           
           bluetooth = {
@@ -460,6 +460,8 @@
           "CTRL, PRINT, exec, grimblast copysave area"
           "ALT, PRINT, exec, grimblast save area - | satty -f -"
           "SHIFT, PRINT, exec, grimblast copysave active"
+
+          "$mainMod SHIFT, s, exec, grimblast copysave area"
 
           # Lock screen
           "$mainMod2, Q, exec, killall hyprlock; hyprlock "
