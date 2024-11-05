@@ -6,7 +6,7 @@
       scrollMethod = "twofinger";
       tapping = true;
       naturalScrolling = true;
-	};
+    };
   };
 }
 

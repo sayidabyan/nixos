@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{pkgs, ...}:
 {
   programs.hyprland = {
     enable = true;
@@ -12,6 +12,7 @@
       satty
       playerctl
       brightnessctl
+      nwg-look
       hyprnome
       blueman
     ];
@@ -122,7 +123,7 @@
           };
 
           battery = {
-            bat = "BAT0";
+            bat = "macsmc-battery";
             format = "{icon}  {capacity}%";
             format-icons = [" " " " " " " " " "];
             interval = 5;
@@ -322,7 +323,6 @@
       enable = true;
       xwayland.enable = true;
       settings = {
-        "$mainMod" = "ALT";
         #env =  [
         #  
         #];
@@ -331,6 +331,20 @@
           accel_profile = "flat";
           scroll_factor = "0.5";
           follow_mouse = "1";
+          touchpad = {
+            natural_scroll = "1";
+            scroll_factor = "0.2";
+            tap-to-click = false;
+            tap-and-drag = false;
+            clickfinger_behavior = true;
+            disable_while_typing = true;
+          };
+        };
+
+        gestures = {
+          workspace_swipe = true;
+          workspace_swipe_cancel_ratio = 0.1;
+          workspace_swipe_distance = 500;
         };
 
         cursor = {
@@ -416,22 +430,22 @@
           "$mainMod, TAB, bringactivetotop"
 
            # Move focus
-          "SUPER, H, movefocus, l"
-          "SUPER, L, movefocus, r"
-          "SUPER, K, movefocus, u"
-          "SUPER, J, movefocus, d"
+          "$mainMod2, H, movefocus, l"
+          "$mainMod2, L, movefocus, r"
+          "$mainMod2, K, movefocus, u"
+          "$mainMod2, J, movefocus, d"
 
           # Move window
-          "SUPER SHIFT, H, movewindow, l"
-          "SUPER SHIFT, L, movewindow, r"
-          "SUPER SHIFT, K, movewindow, u"
-          "SUPER SHIFT, J, movewindow, d"
+          "$mainMod2 SHIFT, H, movewindow, l"
+          "$mainMod2 SHIFT, L, movewindow, r"
+          "$mainMod2 SHIFT, K, movewindow, u"
+          "$mainMod2 SHIFT, J, movewindow, d"
 
           # Resize window
-          "SUPER CTRL, H, resizeactive, -50 0"
-          "SUPER CTRL, L, resizeactive, 50 0"
-          "SUPER CTRL, K, resizeactive, 0 -50"
-          "SUPER CTRL, J, resizeactive, 0 50"
+          "$mainMod2 CTRL, H, resizeactive, -50 0"
+          "$mainMod2 CTRL, L, resizeactive, 50 0"
+          "$mainMod2 CTRL, K, resizeactive, 0 -50"
+          "$mainMod2 CTRL, J, resizeactive, 0 50"
 
           # Switch workspaces with mainMod + [0-9]
           "$mainMod, H, exec, hyprnome -p"
@@ -448,8 +462,7 @@
           "SHIFT, PRINT, exec, grimblast copysave active"
 
           # Lock screen
-          "SUPER, Q, exec, killall hyprlock; hyprlock"
-        ];
+          "$mainMod2, Q, exec, killall hyprlock; hyprlock "
         # Move/resize windows with mainMod + LMB/RMB and dragging
         bindm = [
           "$mainMod, mouse:272, movewindow"
