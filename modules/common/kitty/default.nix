@@ -7,7 +7,7 @@
     };
     programs.kitty = {
       enable = true;
-      package = pkgs.unstable.kitty;
+      package = pkgs.kitty;
       font.name = "Firacode Nerd Font";
       settings = {
         background_opacity = "0.8";

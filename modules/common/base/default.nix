@@ -8,14 +8,12 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
 
-  boot.loader.efi.canTouchEfiVariables = true;
-
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];
   boot.extraModprobeConfig = ''
     options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
-    options hid_apple fnmode=0
+    options hid_apple fnmode=1 iso_layout=0 
   '';
   security.polkit.enable = true;
 
@@ -54,7 +52,6 @@
   services.xserver.enable = true;
 
   # Enable the Desktop Environment/ Display Manager.
- 
   services.xserver.displayManager.gdm = {
     enable = true;
     autoSuspend = false;
@@ -78,9 +75,6 @@
   
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true; # For 32 bit applications
   hardware.ledger.enable = true;
   
   # Enable Flakes
@@ -113,8 +107,8 @@
     home.packages = with pkgs; [
       bc
       bitwarden-desktop
-      unstable.bottom
-      unstable.brave
+      bottom
+      brave
       btop
       deno
       fastfetch
@@ -122,12 +116,13 @@
       nautilus
       neofetch
       nodePackages.typescript-language-server
+      p7zip
       pavucontrol
       pfetch
-      p7zip
       rhythmbox
       signal-desktop
       speedtest-cli
+      squashfsTools
       transmission_4-gtk
       ventoy
       vlc
@@ -135,7 +130,7 @@
     ];
     home.username = "sayid";
     home.homeDirectory = "/home/sayid";
-    home.stateVersion = "24.05";
+    home.stateVersion = "24.11";
     programs.home-manager.enable = true;
     programs.obs-studio = {
       enable = true;
@@ -181,5 +176,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 }

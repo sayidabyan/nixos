@@ -110,7 +110,9 @@
           inputs.nixos-hardware.nixosModules.common-cpu-amd
           inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
         ];
-
+        mbam2 = [
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+        ];
       };
     };
 }

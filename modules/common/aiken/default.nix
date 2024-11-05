@@ -1,8 +1,9 @@
-{inputs, ...}:
+{config, inputs, lib, ...}:
 {
-    home-manager.users.sayid = {...}: {
-        home.packages = [
-            inputs.aiken.packages.x86_64-linux.default
-        ];
-    };
+  home-manager.users.sayid = {...}:
+  {
+    home.packages = [
+      inputs.aiken.packages.aarch64-linux.default
+    ];
+  };
 }
