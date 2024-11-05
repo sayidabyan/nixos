@@ -101,7 +101,6 @@
       deno
       fastfetch
       htop
-      nautilus
       neofetch
       nodePackages.typescript-language-server
       p7zip
