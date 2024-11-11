@@ -25,6 +25,7 @@
       flake = false;
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    apple-silicon-support.url = "github:oliverbestmann/nixos-apple-silicon?branch=main";
   };
   outputs = inputs:
     let
@@ -112,6 +113,7 @@
         ];
         mbam2 = [
           inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+          inputs.apple-silicon-support.nixosModules.default
         ];
       };
     };

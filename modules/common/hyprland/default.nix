@@ -333,7 +333,7 @@
           follow_mouse = "1";
           touchpad = {
             natural_scroll = "1";
-            scroll_factor = "0.2";
+            scroll_factor = "0.1";
             tap-to-click = false;
             tap-and-drag = false;
             clickfinger_behavior = true;
@@ -465,6 +465,7 @@
 
           # Lock screen
           "$mainMod2, Q, exec, killall hyprlock; hyprlock "
+        ];
         # Move/resize windows with mainMod + LMB/RMB and dragging
         bindm = [
           "$mainMod, mouse:272, movewindow"
