@@ -23,11 +23,12 @@
     withRust = true;
     setupAsahiSound = true;
   };
-
-  networking.wireless.iwd = {
-    enable = true;
-    settings.General.EnableNetworkConfugiration = true;
-  };
+  
+  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  # networking.wireless.iwd = {
+  #   enable = true;
+  #   settings.General.EnableNetworkConfugiration = true;
+  # };
   
   home-manager.users.sayid = {...}:
   {
