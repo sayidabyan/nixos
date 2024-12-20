@@ -1,4 +1,4 @@
-{inputs, config, pkgs, ...}:
+{inputs, config, pkgs,...}:
 {
   home-manager.users.sayid = {...}: {
     home.packages = [
