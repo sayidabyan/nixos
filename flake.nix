@@ -24,8 +24,8 @@
       url = "github:simeji/winresizer";
       flake = false;
     };
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    apple-silicon-support.url = "git+https://github.com/tpwrules/nixos-apple-silicon?tag=release-2024-11-12";
+    zen-browser.url = "github:youwen5/zen-browser-flake";
+    apple-silicon-support.url = "git+https://github.com/tpwrules/nixos-apple-silicon";
   };
   outputs = inputs:
     let
