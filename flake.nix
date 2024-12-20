@@ -22,7 +22,7 @@
       flake = false;
     };
     zen-browser.url = "github:youwen5/zen-browser-flake";
-    apple-silicon-support.url = "git+https://github.com/tpwrules/nixos-apple-silicon?tag=release-2024-11-12";
+    apple-silicon-support.url = "git+https://github.com/tpwrules/nixos-apple-silicon";
   };
   outputs = inputs:
     let

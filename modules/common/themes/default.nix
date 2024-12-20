@@ -32,7 +32,6 @@
       font = {
         name = "Quicksand";
         size = 11;
-        package = pkgs.nerdfonts;
       };
       iconTheme = {
         name = "Papirus";
