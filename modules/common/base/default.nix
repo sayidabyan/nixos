@@ -26,7 +26,7 @@
   };
 
   # Set your time zone.
-  time.timeZone = "Asia/Jakarta";
+  time.timeZone = "Europe/London";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -51,7 +51,7 @@
     enable = true;
     autoSuspend = false;
   };
-  # services.desktopManager.cosmic.enable = true;
+  services.desktopManager.cosmic.enable = true;
   # services.displayManager.cosmic-greeter.enable = true;
 
   # Fix Network Manager Error
@@ -83,6 +83,7 @@
   };
 
   services.flatpak.enable = true;
+  services.gvfs.enable = true;
 
   # Allow Unfree
   nixpkgs.config.allowUnfree = true;
@@ -100,7 +101,6 @@
       deno
       fastfetch
       htop
-      nautilus
       neofetch
       nodePackages.typescript-language-server
       p7zip
@@ -112,6 +112,7 @@
       signal-desktop
       speedtest-cli
       squashfsTools
+      xfce.thunar
       transmission_4-gtk
       ventoy
       vlc
@@ -131,6 +132,30 @@
     programs.direnv.enable = true;
     programs.direnv.enableZshIntegration = true;
     programs.direnv.nix-direnv.enable = true; # prevent garbage collection
+
+
+    # Custom Desktop Entry
+    xdg.desktopEntries = {
+      brave = {
+        name = "Brave";
+        exec = "${pkgs.brave}/bin/brave --js-flags=--nodecommit_pooled_pages --enable-features=TouchpadOverscrollHistoryNavigation";
+        startupNotify = true;
+        terminal = false;
+        icon = "brave-browser";
+        categories = ["Network" "WebBrowser"];
+        mimeType = ["application/pdf" "application/rdf+xml" "application/rss+xml" "application/xhtml+xml" "application/xhtml_xml" "application/xml" "image/gif" "image/jpeg" "image/png" "image/webp" "text/html" "text/xml" "x-scheme-handler/http" "x-scheme-handler/https"];
+      };
+    };
+    xdg.desktopEntries.brave.actions = {
+      "new-window" = {
+        name = "New Window";
+        exec = "${pkgs.brave}/bin/brave --js-flags=--nodecommit_pooled_pages --enable-features=TouchpadOverscrollHistoryNavigation";
+      };
+      "new-private-window" = {
+        name = "New Private Window";
+        exec = "${pkgs.brave}/bin/brave --js-flags=--nodecommit_pooled_pages --enable-features=TouchpadOverscrollHistoryNavigation --incognito";
+      };
+    };
   };
 
   # This value determines the NixOS release from which the default
