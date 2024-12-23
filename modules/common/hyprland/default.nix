@@ -102,7 +102,7 @@
     programs.waybar = {
       enable = true;
       package = pkgs.waybar;
-      systemd.enable = true;
+      # systemd.enable = true;
       settings = { 
         mainBar = {
           position = "top";
@@ -328,7 +328,6 @@
         #];
         
         input = {
-          accel_profile = "flat";
           scroll_factor = "0.5";
           follow_mouse = "1";
           touchpad = {
@@ -354,7 +353,7 @@
         };
         
         exec-once = [
-          # "waybar"
+          "waybar"
           "hyprctl setcursor Bibata-Modern-Ice 24"
         ];
 
@@ -491,7 +490,7 @@
         windowrulev2 = [
           "tile,class:^(kitty)$"
           "float,class:^(steam)$"
-          "float,class:^(org.gnome.Nautilus)$"
+          "float,class:^(thunar)$"
           "float,class:^(org.pulseaudio.pavucontrol)$"
           "float,class:^(.blueman-manager-wrapped)$"
         ];
