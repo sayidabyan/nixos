@@ -51,7 +51,7 @@
     enable = true;
     autoSuspend = false;
   };
-  services.desktopManager.cosmic.enable = true;
+  # services.desktopManager.cosmic.enable = true;
   # services.displayManager.cosmic-greeter.enable = true;
 
   # Fix Network Manager Error
