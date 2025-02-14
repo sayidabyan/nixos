@@ -8,7 +8,7 @@ while true; do
 	# Add a space on the first run
 	[ -z "$LAST" ] && SPACE=" "
 	# Get user input
-	NEXT="$(fuzzel -l 0 --dmenu -p "${LAST}${SPACE}")"
+	NEXT="$(fuzzel -l 0 --dmenu -p "> ${SPACE}${LAST}")"
 	# Quit if empty
 	[ -z "$NEXT" ] && exit 1
 	# Copy and exit if y is entered

@@ -51,7 +51,6 @@
     enable = true;
     autoSuspend = false;
   };
-  # services.desktopManager.cosmic.enable = true;
   # services.displayManager.cosmic-greeter.enable = true;
 
   # Fix Network Manager Error
@@ -84,6 +83,9 @@
 
   services.flatpak.enable = true;
   services.gvfs.enable = true;
+  services.tumbler.enable = true;
+
+  programs.xfconf.enable = true;
 
   # Allow Unfree
   nixpkgs.config.allowUnfree = true;
@@ -104,14 +106,16 @@
       neofetch
       nodePackages.typescript-language-server
       p7zip
-      pavucontrol
+      pwvucontrol
       pfetch
       rhythmbox
+      scrcpy
       signal-desktop
       speedtest-cli
       squashfsTools
       xfce.thunar
       transmission_4-gtk
+      unzip
       ventoy
       vlc
       vscode-fhs
@@ -130,7 +134,6 @@
     programs.direnv.enable = true;
     programs.direnv.enableZshIntegration = true;
     programs.direnv.nix-direnv.enable = true; # prevent garbage collection
-
 
     # Custom Desktop Entry
     xdg.desktopEntries = {

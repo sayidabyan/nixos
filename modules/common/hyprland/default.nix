@@ -102,7 +102,7 @@
     programs.waybar = {
       enable = true;
       package = pkgs.waybar;
-      # systemd.enable = true;
+      systemd.enable = true;
       settings = { 
         mainBar = {
           position = "top";
@@ -124,7 +124,7 @@
 
           battery = {
             bat = "macsmc-battery";
-            format = "{icon}  {capacity}%";
+            format = "{icon} {capacity}%";
             format-icons = [" " " " " " " " " "];
             interval = 5;
             states = {
@@ -179,7 +179,7 @@
             format-muted = "  0%";
             format-icons = {default = ["" " " " "];};
             scroll-step = 2;
-            on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
+            on-click = "pwvucontrol";
           };
 
           "custom/launcher" = {
@@ -216,7 +216,7 @@
             padding: 0;
             margin: 0;
             min-height: 0px;
-            font-family: Quicksand;
+            font-family: Quicksand, Firacode Nerd Font;
             font-weight: bold;
             opacity: 1;
         }
@@ -323,9 +323,9 @@
       enable = true;
       xwayland.enable = true;
       settings = {
-        #env =  [
-        #  
-        #];
+        env =  [
+          "ELECTRON_OZONE_PLATFORM_HINT, wayland" 
+        ];
         
         input = {
           scroll_factor = "0.5";
@@ -349,11 +349,10 @@
         cursor = {
           enable_hyprcursor = true;
           no_hardware_cursors = true;
-          no_warps = true;
         };
         
         exec-once = [
-          "waybar"
+          # "waybar"
           "hyprctl setcursor Bibata-Modern-Ice 24"
         ];
 
