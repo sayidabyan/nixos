@@ -124,7 +124,7 @@
     ];
     home.username = "sayid";
     home.homeDirectory = "/home/sayid";
-    home.stateVersion = "24.11";
+    home.stateVersion = "25.05";
 
     programs.home-manager.enable = true;
     programs.gh.enable = true;
@@ -133,36 +133,12 @@
     programs.direnv.enable = true;
     programs.direnv.enableZshIntegration = true;
     programs.direnv.nix-direnv.enable = true; # prevent garbage collection
-    
-    # Custom Desktop Entry
-    xdg.desktopEntries = {
-      brave = {
-        name = "Brave";
-        exec = "${pkgs.brave}/bin/brave --js-flags=--nodecommit_pooled_pages --enable-features=TouchpadOverscrollHistoryNavigation";
-        startupNotify = true;
-        terminal = false;
-        icon = "brave-browser";
-        categories = ["Network" "WebBrowser"];
-        mimeType = ["application/pdf" "application/rdf+xml" "application/rss+xml" "application/xhtml+xml" "application/xhtml_xml" "application/xml" "image/gif" "image/jpeg" "image/png" "image/webp" "text/html" "text/xml" "x-scheme-handler/http" "x-scheme-handler/https"];
-      };
-    };
-    xdg.desktopEntries.brave.actions = {
-      "new-window" = {
-        name = "New Window";
-        exec = "${pkgs.brave}/bin/brave --js-flags=--nodecommit_pooled_pages --enable-features=TouchpadOverscrollHistoryNavigation";
-      };
-      "new-private-window" = {
-        name = "New Private Window";
-        exec = "${pkgs.brave}/bin/brave --js-flags=--nodecommit_pooled_pages --enable-features=TouchpadOverscrollHistoryNavigation --incognito";
-      };
-    };
   };
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }
