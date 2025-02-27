@@ -179,7 +179,7 @@
             format-muted = "  0%";
             format-icons = {default = ["" " " " "];};
             scroll-step = 2;
-            on-click = "pwvucontrol";
+            on-click = "pavucontrol";
           };
 
           "custom/launcher" = {

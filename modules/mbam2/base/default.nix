@@ -29,7 +29,9 @@
   #   enable = true;
   #   settings.General.EnableNetworkConfugiration = true;
   # };
-  
+  environment.variables = {
+    GSK_RENDERER = "ngl";
+  }; 
   home-manager.users.sayid = {...}:
   {
     home.packages = with pkgs; [
