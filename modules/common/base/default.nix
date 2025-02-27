@@ -106,7 +106,7 @@
       neofetch
       nodePackages.typescript-language-server
       p7zip
-      pwvucontrol
+      pavucontrol
       pfetch
       rhythmbox
       scrcpy
@@ -123,18 +123,15 @@
     home.username = "sayid";
     home.homeDirectory = "/home/sayid";
     home.stateVersion = "24.11";
+
     programs.home-manager.enable = true;
-    programs.obs-studio = {
-      enable = true;
-      plugins = [ pkgs.obs-studio-plugins.droidcam-obs ];
-    };
     programs.gh.enable = true;
     
     # Direnv
     programs.direnv.enable = true;
     programs.direnv.enableZshIntegration = true;
     programs.direnv.nix-direnv.enable = true; # prevent garbage collection
-
+    
     # Custom Desktop Entry
     xdg.desktopEntries = {
       brave = {
