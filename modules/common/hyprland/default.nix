@@ -87,7 +87,7 @@
         # Hour-Time
         label = [
           {
-            text = "$USER";
+            # text = "$USER";
             color ="rgba(205, 214, 244, .75)";
             font_size = 30;
             font_family = "Quicksand";
@@ -184,7 +184,7 @@
 
           "custom/launcher" = {
             format = "";
-            on-click = "pkill fuzzel || fuzzel";
+            on-click = "pkill fuzzel || ~/nixos/modules/common/hyprland/fuzzel/fuzzel-powermenu.sh";
             tooltip = "false";
           };
           "custom/left"= {

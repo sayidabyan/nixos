@@ -16,6 +16,11 @@
         ];
         "$mainMod" = "SUPER";
         "$mainMod2" = "ALT";
+
+        render = {
+          explicit_sync = 0;
+          explicit_sync_kms = 0;
+        };
       };
     };
   };

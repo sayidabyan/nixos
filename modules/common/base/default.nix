@@ -82,10 +82,6 @@
   };
 
   services.flatpak.enable = true;
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
-
-  programs.xfconf.enable = true;
 
   # Allow Unfree
   nixpkgs.config.allowUnfree = true;
@@ -115,7 +111,6 @@
       signal-desktop
       speedtest-cli
       squashfsTools
-      xfce.thunar
       transmission_4-gtk
       unzip
       ventoy
