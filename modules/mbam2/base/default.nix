@@ -25,10 +25,6 @@
   };
   
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  # networking.wireless.iwd = {
-  #   enable = true;
-  #   settings.General.EnableNetworkConfugiration = true;
-  # };
   environment.variables = {
     GSK_RENDERER = "ngl";
   }; 
@@ -38,6 +34,12 @@
       telegram-desktop
     ];
   };
+  
+#  fileSystems."/mnt/external" = {
+#    device = "100.112.119.112:/external";
+#    fsType = "nfs";
+#    options = [ "x-systemd.automount" "noauto" "x-systemd.idle-timeout=600"];
+#  };
   
 }
 
