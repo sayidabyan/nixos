@@ -14,5 +14,6 @@
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPEDdTC2vkW+j8YOj9p/U7O9kTnpMVzPqCfKw/iHKrX6 sayid@nixos" # mini pc
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAXcXK+YA7v9l/wVNUC5+i2r8rWeqx5KID6x+DhSftfE sayid@nixos" # main pc
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7Z1RmqytBBd+8O70x+bjgDLNkjOF7YAmkmVcQ4xJx6 sayid@nixos" # mba m2
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDppKCmUpwmycNKIKEgkYuk2nu4JP6ToGZLBPKiRqA+L sayid@sayids-MacBook-Air.local" #mba m2 mac
     ];
 }

@@ -1,14 +1,13 @@
-{config, pkgs, ...}:
+{pkgs, ...}:
 {
-  services.immich = {
+  services.jellyfin = {
     enable = true;
-    package = pkgs.unstable.immich;
-    host = "100.112.119.112";
-    mediaLocation = "/media/external/Services/immich";
+    dataDir = "/media/external/jellyfin";
   };
-  services.nginx.virtualHosts."photos.say.id" = {
+
+  services.nginx.virtualHosts."media.say.id" = {
     locations."/" = {
-      proxyPass = "http://100.112.119.112:${toString config.services.immich.port}";
+      proxyPass = "http://100.112.119.112:8096";
       proxyWebsockets = true;
       recommendedProxySettings = true;
       extraConfig = ''

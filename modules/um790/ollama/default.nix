@@ -16,7 +16,7 @@
       port = 8080;
     };
   };
-  services.nginx.virtualHosts."gpt.say.id" = {
+  services.nginx.virtualHosts."chat.say.id" = {
     locations."/" = {
       proxyPass = "http://100.112.119.112:${toString config.services.open-webui.port}";
       proxyWebsockets = true;

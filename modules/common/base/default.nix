@@ -125,6 +125,7 @@
       pavucontrol
       pfetch
       p7zip
+      radeontop
       rhythmbox
       signal-desktop
       speedtest-cli
