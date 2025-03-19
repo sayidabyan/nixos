@@ -99,6 +99,7 @@
       deno
       fastfetch
       htop
+      jellyfin-media-player
       neofetch
       nodePackages.typescript-language-server
       p7zip
@@ -108,6 +109,7 @@
       radeontop
       rhythmbox
       scrcpy
+      seafile-client
       signal-desktop
       speedtest-cli
       squashfsTools

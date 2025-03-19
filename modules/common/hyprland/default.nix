@@ -22,7 +22,7 @@
       enable = true;
       settings = {
         main = {
-          terminal = "${pkgs.kitty}/bin/kitty";
+          terminal = "/home/sayid/.nix-profile/bin/kitty";
           font = "Quicksand:weight=medium:size=12";
           icon-theme = "Papirus-Dark";
         };
@@ -487,7 +487,6 @@
           "$mainMod, XF86MonBrightnessDown, exec,  brightnessctl -d kbd_backlight s 20-"
         ];
         windowrulev2 = [
-          "tile,class:^(kitty)$"
           "float,class:^(steam)$"
           "float,class:^(thunar)$"
           "float,class:^(org.pulseaudio.pavucontrol)$"
