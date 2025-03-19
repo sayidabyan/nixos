@@ -13,6 +13,7 @@
         background_opacity = "0.8";
         resize_debounce_time = "0";
         touch_scroll_multiplier = "10.0";
+        confirm_os_window_close = 0;
       };
       environment = {
         "KITTY_ENABLE_WAYLAND" = "1";
