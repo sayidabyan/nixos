@@ -28,12 +28,6 @@
   environment.variables = {
     GSK_RENDERER = "ngl";
   }; 
-  home-manager.users.sayid = {...}:
-  {
-    home.packages = with pkgs; [
-      telegram-desktop
-    ];
-  };
   
 #  fileSystems."/mnt/external" = {
 #    device = "100.112.119.112:/external";
