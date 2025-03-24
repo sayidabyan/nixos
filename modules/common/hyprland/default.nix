@@ -488,7 +488,7 @@
         ];
         windowrulev2 = [
           "float,class:^(steam)$"
-          "float,class:^(thunar)$"
+          "float,class:^(nemo)$"
           "float,class:^(org.pulseaudio.pavucontrol)$"
           "float,class:^(.blueman-manager-wrapped)$"
         ];

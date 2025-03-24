@@ -117,6 +117,7 @@
       transmission_4-gtk
       unzip
       ventoy
+      vesktop
       vlc
       vscode-fhs
     ];
