@@ -105,7 +105,6 @@
       p7zip
       pavucontrol
       pfetch
-      p7zip
       radeontop
       rhythmbox
       scrcpy
