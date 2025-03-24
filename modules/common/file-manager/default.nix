@@ -1,16 +1,27 @@
-{ pkgs, ...}:
+{...}:
 {
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs.xfce; [
-      thunar-volman
-      thunar-archive-plugin
-      thunar-media-tags-plugin
+#  programs.thunar = {
+#    enable = true;
+#    plugins = with pkgs.xfce; [
+#      thunar-volman
+#      thunar-archive-plugin
+#      thunar-media-tags-plugin
+#    ];
+#  };
+#  services.gvfs.enable = true;
+#  services.tumbler.enable = true;
+#
+#  programs.xfconf.enable = true;
+#  programs.file-roller.enable = true;
+  home-manager.users.sayid = {pkgs, ...}: {
+    home.packages = with pkgs; [
+      nemo-with-extensions
     ];
-  };
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
 
-  programs.xfconf.enable = true;
-  programs.file-roller.enable = true;
+    dconf.settings = {
+      "org/cinnamon/desktop/applications/terminal" = {
+        exec = "kitty";
+      };
+    };
+  };
 }
