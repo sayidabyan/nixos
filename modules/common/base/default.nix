@@ -95,7 +95,7 @@
       aiken
       bc
       bottom
-      brave
+      unstable.brave
       btop
       celluloid
       dbeaver-bin
@@ -103,6 +103,8 @@
       htop
       jellyfin-media-player
       neofetch
+      nix-prefetch-git
+      nix-prefetch
       p7zip
       pavucontrol
       pfetch
