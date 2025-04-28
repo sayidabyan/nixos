@@ -129,7 +129,7 @@
       settings = { 
         mainBar = {
           position = "top";
-          layer = "top";
+          layer = "bottom";
           height = 5;
           margin-top = 0;
           margin-bottom = 0;
@@ -137,7 +137,7 @@
           margin-right = 0;
           modules-left = [ "custom/left" "custom/launcher" "hyprland/window" "custom/right"];
           # modules-center = ["custom/altLeft" "hyprland/window" "custom/altRight"];
-          modules-right = ["custom/left" "tray" "bluetooth" "pulseaudio" "pulseaudio/slider" "battery" "clock" "custom/right"];
+          modules-right = ["custom/left" "tray" "bluetooth" "pulseaudio" "pulseaudio/slider" "battery" "cpu" "memory" "clock" "custom/right"];
           
           bluetooth = {
             "format" = "";
@@ -523,10 +523,12 @@
           "$mainMod, XF86MonBrightnessDown, exec,  brightnessctl -d kbd_backlight s 20-"
         ];
         windowrulev2 = [
-          "float,class:^(steam)$"
+          # "float,class:^(steam)$"
           "float,class:^(nemo)$"
           "float,class:^(org.pulseaudio.pavucontrol)$"
           "float,class:^(.blueman-manager-wrapped)$"
+          "fullscreen,class:^steam_app\d+$"
+          "monitor 0,class:^steam_app_\d+$"
         ];
       };
     };

@@ -26,7 +26,7 @@
   };
 
   # Set your time zone.
-  time.timeZone = "Europe/London";
+  time.timeZone = "Asia/Jakarta";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
