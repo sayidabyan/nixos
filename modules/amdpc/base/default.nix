@@ -10,7 +10,7 @@
     modesetting.enable = true;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    #package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
   
   programs.gamescope.enable = true;
@@ -23,11 +23,8 @@
       brave-browser = {
         name = "Brave Web Browser";
         exec = "/home/sayid/.nix-profile/bin/brave --enable-features=WaylandLinuxDrmSyncobj";
-        startupNotify = true;
         terminal = false;
         icon = "brave-browser";
-        categories = ["Network" "WebBrowser"];
-        mimeType = ["application/pdf" "application/rdf+xml" "application/rss+xml" "application/xhtml+xml" "application/xhtml_xml" "application/xml" "image/gif" "image/jpeg" "image/png" "image/webp" "text/html" "text/xml" "x-scheme-handler/http" "x-scheme-handler/https"];
       };
       vesktop = {
         name = "Vesktop";

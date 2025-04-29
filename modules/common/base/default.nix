@@ -112,7 +112,7 @@
       rhythmbox
       scrcpy
       seafile-client
-      unstable.signal-desktop-source
+      signal-desktop
       speedtest-cli
       squashfsTools
       telegram-desktop

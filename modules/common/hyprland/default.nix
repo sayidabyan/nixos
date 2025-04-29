@@ -136,7 +136,7 @@
           margin-left = 0;
           margin-right = 0;
           modules-left = [ "custom/left" "custom/launcher" "hyprland/window" "custom/right"];
-          # modules-center = ["custom/altLeft" "hyprland/window" "custom/altRight"];
+          modules-center = ["custom/altLeft" "hyprland/workspaces" "custom/altRight"];
           modules-right = ["custom/left" "tray" "bluetooth" "pulseaudio" "pulseaudio/slider" "battery" "cpu" "memory" "clock" "custom/right"];
           
           bluetooth = {
