@@ -97,6 +97,7 @@
       bottom
       unstable.brave
       btop
+      cava
       celluloid
       dbeaver-bin
       fastfetch
