@@ -27,6 +27,8 @@ vim.opt.wrap = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+vim.opt.mouse = ''
+
 -- string with [ and ] characters are considered as a file path and can be navigated with gf
 vim.opt.isfname:append('[')
 vim.opt.isfname:append(']')

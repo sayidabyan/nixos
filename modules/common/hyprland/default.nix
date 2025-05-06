@@ -39,17 +39,15 @@
     };
     services.mako = {
       enable = true;
-      font = "Quicksand 12";
-      backgroundColor = "#1e1e2e";
-      textColor = "#cdd6f4";
-      borderColor = "#b4befe";
-      borderRadius = 10;
-      progressColor = "over #313244";
-      defaultTimeout = 5000;
-      extraConfig = ''
-        [urgency=high]
-        border-color=#fab387
-      '';
+      settings = {
+        font = "Quicksand 12";
+        backgroundColor = "#1e1e2e";
+        textColor = "#cdd6f4";
+        borderColor = "#b4befe";
+        borderRadius = "10";
+        progressColor = "over #313244";
+        defaultTimeout = "5000";
+      };
     };
 
     services.hypridle = {
