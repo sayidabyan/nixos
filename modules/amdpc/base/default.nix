@@ -16,7 +16,7 @@
   programs.gamescope.enable = true;
   programs.steam = {
     enable = true;
-    gamescopeSession.enable = true;
+    # gamescopeSession.enable = true;
   };
   home-manager.users.sayid = { pkgs, ... }: {
     xdg.desktopEntries = {
