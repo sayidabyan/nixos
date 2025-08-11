@@ -11,6 +11,7 @@
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-bleeding.url = "github:nixos/nixpkgs/master";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # IMPORTANT
     nixos-cosmic = {
@@ -90,6 +91,10 @@
                 nixpkgs.overlays = [
                   (final: prev: {
                     stable = import inputs.nixpkgs-stable {
+                      system = final.system;
+                      config.allowUnfree = true;
+                    };
+                    unstable = import inputs.nixpkgs-unstable {
                       system = final.system;
                       config.allowUnfree = true;
                     };

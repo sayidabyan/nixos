@@ -28,7 +28,6 @@
     home.packages = with pkgs; [
       cider-2
       lact
-      lmstudio
       mangohud
       protonplus
       steam-rom-manager
@@ -54,7 +53,8 @@
   hardware.enableAllFirmware = true;
   services.ollama = {
     enable = true;
-    package = pkgs.ollama;
+    package = pkgs.bleeding.ollama;
+    acceleration = "rocm";
     host = "0.0.0.0";
   };
   services.nginx.virtualHosts."ollama.say.id" = {
