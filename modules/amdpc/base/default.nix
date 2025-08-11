@@ -70,5 +70,6 @@
       '';
     };
   };
+  hardware.enableRedistributableFirmware = true;
 }
 

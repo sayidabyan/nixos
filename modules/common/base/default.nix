@@ -30,7 +30,7 @@
   services.xserver.enable = true;
 
   # Enable the Desktop Environment/ Display Manager.
-  services.xserver.displayManager.gdm = {
+  services.displayManager.gdm = {
     enable = true;
     autoSuspend = false;
   };

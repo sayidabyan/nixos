@@ -9,7 +9,7 @@
     };
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-bleeding.url = "github:nixos/nixpkgs/master";
