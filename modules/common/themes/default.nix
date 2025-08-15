@@ -87,7 +87,7 @@
     };
     dconf.settings = {
       "org/gnome/desktop/background" = {
-        picture-uri-dark = "/home/sayid/nixos/bg/Path Less Traveled.jpg";
+        picture-uri-dark = "/home/sayid/nixos/bg/Japan Pond.jpg";
       };
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";

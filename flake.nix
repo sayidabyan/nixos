@@ -13,7 +13,8 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-bleeding.url = "github:nixos/nixpkgs/master";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # IMPORTANT
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    jovian.url = "github:jovian-experiments/jovian-nixos";
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +46,7 @@
           lib = nixpkgs.lib;
           nix-flatpak = inputs.nix-flatpak;
           chaotic = inputs.chaotic;
+          jovian = inputs.jovian;
           modulesInDir = dir: (lib.trivial.pipe dir [
             builtins.readDir
             (lib.attrsets.filterAttrs (key: val: val == "directory"))
@@ -80,9 +82,8 @@
               nur.modules.nixos.default
               home-manager.nixosModules.home-manager
               nix-flatpak.nixosModules.nix-flatpak 
-              chaotic.nixosModules.nyx-cache
-              chaotic.nixosModules.nyx-overlay
-              chaotic.nixosModules.nyx-registry
+              chaotic.nixosModules.default
+              jovian.nixosModules.default
               {
 
                 # make `nix run nixpkgs#nixpkgs` use the same nixpkgs as the one used by this flake.

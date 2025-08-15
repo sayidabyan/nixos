@@ -54,34 +54,34 @@
     ];
     
     #-----Hyprapps-----
-    services.hypridle = {
-      enable = true;
-      settings = {
-        general = {
-          after_sleep_cmd = "hyprctl dispatch dpms on";
-          ignore_dbus_inhibit = false;
-          lock_cmd = "hyprlock";
-        };
+   # services.hypridle = {
+   #   enable = false;
+   #   settings = {
+   #     general = {
+   #       after_sleep_cmd = "hyprctl dispatch dpms on";
+   #       ignore_dbus_inhibit = false;
+   #       lock_cmd = "hyprlock";
+   #     };
 
-        listener = [
-          {
-            timeout = 900;
-            on-timeout = "hyprlock";
-          }
-          {
-            timeout = 1200;
-            on-timeout = "hyprctl dispatch dpms off";
-            on-resume = "hyprctl dispatch dpms on";
-          }
-        ];
-      };
-    };
+   #     listener = [
+   #       {
+   #         timeout = 900;
+   #         on-timeout = "hyprlock";
+   #       }
+   #       {
+   #         timeout = 1200;
+   #         on-timeout = "hyprctl dispatch dpms off";
+   #         on-resume = "hyprctl dispatch dpms on";
+   #       }
+   #     ];
+   #   };
+   # };
 
     services.hyprpaper = {
       enable = true;
       settings = {
         preload = [
-          "/home/sayid/nixos/bg/path less traveled.jpg"
+          "/home/sayid/nixos/bg/Japan Pond.jpg"
         ];
       };
     };
@@ -94,7 +94,7 @@
         };
         background = [
           {
-            path = "/home/sayid/nixos/bg/path less traveled.jpg";
+            path = "/home/sayid/nixos/bg/Japan Pond.jpg";
             blur_passes = 3;
             blur_size = 8;
           }
@@ -178,6 +178,7 @@
           shortcuts.enabled = false;
           directories.enabled = false;
           powermenu.avatar.image = "~/nixos/pp/ggpp.jpg";
+          # powermenu.sleep = "hyprlock >/dev/null 2>&1 & sleep 0.5; systemctl suspend || true'";
         };
         theme.bar = {
           background = "#000000";

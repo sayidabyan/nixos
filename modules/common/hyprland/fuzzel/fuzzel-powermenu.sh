@@ -6,7 +6,7 @@ case $SELECTION in
 	*"Lock")
 		hyprlock;;
 	*"Suspend")
-		systemctl suspend;;
+    setsid hyprlock >/dev/null 2>&1 & sleep 0.5; systemctl suspend;;
 	*"Log out")
 		hyprctl dispatch exit 1;;
 	*"Reboot")

@@ -135,6 +135,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+   programs.dconf.enable = true; 
 
   # programs.nh = {
   #  enable = true;
