@@ -1,5 +1,7 @@
 {config, pkgs, ...}:
 {
+  # services.logind.lidSwitch = "ignore";
+
   # Steam
   programs.steam = {
     enable = true;
