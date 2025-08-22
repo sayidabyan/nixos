@@ -30,10 +30,7 @@
   services.xserver.enable = true;
 
   # Enable the Desktop Environment/ Display Manager.
-  services.displayManager.gdm = {
-    enable = true;
-    autoSuspend = false;
-  };
+  services.displayManager.gdm.enable = true;
 
   # Fix Network Manager Error
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -94,12 +91,12 @@
       parsec-bin
       pavucontrol
       pfetch
+      qbittorrent
       rhythmbox
       scrcpy
       speedtest-cli
       squashfsTools
       telegram-desktop
-      transmission_4-gtk
       unzip
       vesktop
       xviewer

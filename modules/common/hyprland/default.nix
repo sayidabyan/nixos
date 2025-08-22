@@ -11,37 +11,6 @@
     portalPackage = pkgs.xdg-desktop-portal-hyprland;
   };
 
-  # services.greetd.enable = true;
-  # programs.regreet = {
-  #   enable = true;
-  #   cageArgs = [ "-m" "last" ];
-  #   settings = {
-  #     commands = {
-  #       reboot = [ "systemctl" "reboot" ];
-  #       poweroff = [ "systemctl" "poweroff" ];
-  #     };
-  #   };
-  #   font = {
-  #     name = "Quicksand";
-  #     size = 11;
-  #   };
-  #   theme = {
-  #     name = "Matcha-dark-azul";
-  #     package = pkgs.matcha-gtk-theme.override {
-  #       colorVariants = ["dark"];
-  #       themeVariants = ["azul"];
-  #     };
-  #   };
-  #   iconTheme = {
-  #     name = "Papirus-dark";
-  #     package = pkgs.papirus-icon-theme;
-  #   };
-  #   cursorTheme = {
-  #     name = "Bibata-Modern-Ice";
-  #     package = pkgs.bibata-cursors;
-  #   };
-  # };
-
   home-manager.users.sayid = {...}: {
     home.packages = with pkgs; [
       blueman
