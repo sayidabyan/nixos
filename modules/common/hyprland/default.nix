@@ -342,7 +342,7 @@
         decoration = {
           blur = {
             enabled = true;
-            passes = "2";
+            passes = "3";
           };
           shadow = {
             enabled = false;

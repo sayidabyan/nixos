@@ -15,6 +15,8 @@
 
   # Flatpak font compatibility
   system.fsPackages = [ pkgs.bindfs ];
+ 
+ environment.systemPackages = [ pkgs. adwaita-icon-theme ];
 
   fileSystems = let
     mkRoSymBind = path: {

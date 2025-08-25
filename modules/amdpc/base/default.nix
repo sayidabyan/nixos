@@ -18,7 +18,6 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    package = pkgs.mesa_git;
   };
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];

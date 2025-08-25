@@ -13,12 +13,7 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-bleeding.url = "github:nixos/nixpkgs/master";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    jovian.url = "github:jovian-experiments/jovian-nixos";
-    nixos-cosmic = {
-      url = "github:lilyinstarlight/nixos-cosmic";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     editor-integration-nvim = {
       url = "github:aiken-lang/editor-integration-nvim";
       flake = false;
@@ -41,12 +36,10 @@
         let
           nixpkgs = inputs.nixpkgs;
           home-manager = inputs.home-manager;
-          nixos-cosmic = inputs.nixos-cosmic;
           nur = inputs.nur;
           lib = nixpkgs.lib;
           nix-flatpak = inputs.nix-flatpak;
-          chaotic = inputs.chaotic;
-          jovian = inputs.jovian;
+          # chaotic = inputs.chaotic;
           modulesInDir = dir: (lib.trivial.pipe dir [
             builtins.readDir
             (lib.attrsets.filterAttrs (key: val: val == "directory"))
@@ -78,12 +71,10 @@
                #   trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
                # };
               }
-              nixos-cosmic.nixosModules.default
               nur.modules.nixos.default
               home-manager.nixosModules.home-manager
               nix-flatpak.nixosModules.nix-flatpak 
-              chaotic.nixosModules.default
-              jovian.nixosModules.default
+              # chaotic.nixosModules.default
               {
 
                 # make `nix run nixpkgs#nixpkgs` use the same nixpkgs as the one used by this flake.

@@ -30,7 +30,10 @@
   services.xserver.enable = true;
 
   # Enable the Desktop Environment/ Display Manager.
-  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm = {
+    enable = true;
+    autoSuspend = false;
+  };
 
   # Fix Network Manager Error
   systemd.services.NetworkManager-wait-online.enable = false;
