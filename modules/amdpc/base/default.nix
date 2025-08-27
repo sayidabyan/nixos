@@ -5,6 +5,8 @@
     enable = true;
     package = pkgs.steam;
   };
+  programs.gamescope.enable = true;
+
   boot.kernelParams = [ 
     "amdgpu.ppfeaturemask=0xffffffff" # enable radeon oc control(?)
     # fix nic/ethernet issue (?)
