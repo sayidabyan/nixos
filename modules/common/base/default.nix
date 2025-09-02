@@ -84,7 +84,6 @@
       discord
       fastfetch
       htop
-      jellyfin-media-player
       libnotify
       neofetch
       nix-prefetch-git
@@ -97,6 +96,7 @@
       qbittorrent
       rhythmbox
       scrcpy
+      siyuan
       speedtest-cli
       squashfsTools
       telegram-desktop

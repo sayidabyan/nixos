@@ -33,6 +33,7 @@
       steam-rom-manager
       unigine-heaven
       unigine-superposition
+      onlyoffice-desktopeditors
     ];
   };
   systemd.services.lactd = {
