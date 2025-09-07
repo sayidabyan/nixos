@@ -17,6 +17,10 @@
           "DP-2, 2560x1440@60, 2560x-583, 1, transform, 3"
         ];
 
+        misc = {
+          vrr = 1;
+        };
+
         "$mainMod" = "ALT";
         "$mainMod2" = "SUPER";
 

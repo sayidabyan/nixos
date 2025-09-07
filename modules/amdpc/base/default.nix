@@ -5,7 +5,12 @@
     enable = true;
     package = pkgs.steam;
   };
-  programs.gamescope.enable = true;
+  programs.gamescope = {
+    enable = true;
+    package = pkgs.gamescope.overrideAttrs (_: {
+      NIX_CFLAGS_COMPILE = ["-fno-fast-math"];
+    });
+  };
 
   boot.kernelParams = [ 
     "amdgpu.ppfeaturemask=0xffffffff" # enable radeon oc control(?)
@@ -34,6 +39,7 @@
       unigine-heaven
       unigine-superposition
       onlyoffice-desktopeditors
+      lutris
     ];
   };
   systemd.services.lactd = {

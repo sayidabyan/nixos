@@ -371,6 +371,10 @@
           new_window_takes_over_fullscreen = 1;
           session_lock_xray = false;
         };
+
+        debug = {
+          full_cm_proto = true;
+        };
          
         dwindle = {
           pseudotile = true;
