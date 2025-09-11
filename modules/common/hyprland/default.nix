@@ -7,8 +7,7 @@
 
   programs.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
-    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    package = pkgs.bleeding.hyprland;
   };
 
   home-manager.users.sayid = {...}: {
@@ -278,8 +277,7 @@
     wayland.windowManager.hyprland = {
       enable = true;
       xwayland.enable = true;
-      package = pkgs.hyprland;
-      portalPackage = pkgs.xdg-desktop-portal-hyprland;
+      package = pkgs.bleeding.hyprland;
       # plugins = [
       #  pkgs.hyprlandPlugins.hypr-dynamic-cursors
       #];

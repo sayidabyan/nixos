@@ -3,9 +3,6 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = with pkgs;[
-      xdg-desktop-portal-hyprland
-    ];
   };
   environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
   
@@ -17,9 +14,6 @@
     };
     xdg.portal = {
       enable = true;
-      extraPortals = with pkgs;[
-        xdg-desktop-portal-hyprland
-      ];
       config.common.default = "*";
     };
     xdg.mime.enable = true;
