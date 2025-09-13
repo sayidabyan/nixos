@@ -313,14 +313,6 @@
           };
         };
 
-        gestures = {
-          workspace_swipe = true;
-          workspace_swipe_cancel_ratio = 0.8;
-          workspace_swipe_min_speed_to_force = 3;
-          workspace_swipe_distance = 1200;
-          workspace_swipe_direction_lock = false;
-        };
-
         cursor = {
           enable_hyprcursor = true;
         };
