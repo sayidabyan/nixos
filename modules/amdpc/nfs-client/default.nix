@@ -12,6 +12,21 @@
       "x-systemd.idle-timeout=600s"
       "x-systemd.device-timeout=10s"
       "x-systemd.requires=network-online.target"
+      "vers=4"
+    ];
+  };
+  fileSystems."/mnt/Music" = {
+    device = "100.112.119.112:/music";
+    fsType = "nfs";
+    options = [
+      "_netdev"
+      "nofail"
+      "noauto" 
+      "x-systemd.automount" 
+      "x-systemd.idle-timeout=600s"
+      "x-systemd.device-timeout=10s"
+      "x-systemd.requires=network-online.target"
+      "vers=4"
     ];
   };
 }

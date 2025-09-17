@@ -18,6 +18,11 @@
   networking.networkmanager.enable = true;
   hardware.bluetooth = {
     enable = true;
+    settings = {
+      General = {
+        UserspaceHID=true;
+      };
+    };
   };
 
   # Set your time zone.
@@ -108,7 +113,7 @@
     ];
     home.username = "sayid";
     home.homeDirectory = "/home/sayid";
-    home.stateVersion = "25.05";
+    home.stateVersion = "25.11";
 
     programs.home-manager.enable = true;
     programs.gh.enable = true;
@@ -148,5 +153,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 }

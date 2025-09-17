@@ -55,7 +55,10 @@
   # udev rules for dualsense
   services.udev.extraRules = ''
     # PS5 DualSense controller over USB hidraw
+    # USB
     ATTRS{name}=="Sony Interactive Entertainment DualSense Wireless Controller Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+    # Bluetooth
+    ATTRS{name}=="DualSense Wireless Controller Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="1"
   '';
   hardware.enableAllFirmware = true;
   services.ollama = {
@@ -77,6 +80,5 @@
       '';
     };
   };
-  hardware.enableRedistributableFirmware = true;
 }
 
