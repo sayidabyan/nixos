@@ -83,6 +83,7 @@
       bc
       bottom
       brave
+      custom.brave-nightly
       btop
       cava
       dbeaver-bin
