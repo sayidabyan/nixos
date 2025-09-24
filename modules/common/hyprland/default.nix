@@ -109,7 +109,7 @@
     programs.hyprpanel = {
       enable = true;
       systemd.enable = true;
-      package = pkgs.unstable.hyprpanel;
+      package = pkgs.hyprpanel;
       settings = {
         bar.layouts = {
           "*" = {
@@ -120,7 +120,7 @@
         };
         bar = {
           autoHide = false;
-          layer = "overlay";
+          layer = "top";
           location = "top";
           launcher.icon = "󱄅";
           clock.format = "%a, %b %d  %H:%M";
