@@ -88,6 +88,7 @@
       cava
       dbeaver-bin
       discord
+      bleeding.discord-canary
       fastfetch
       htop
       libnotify
