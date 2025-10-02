@@ -383,7 +383,7 @@
         ];
         
         bind = [
-          "$mainMod, T, exec, kitty"
+          "$mainMod, T, exec, ghostty"
           "$mainMod, Q, killactive" 
           # "$mainMod, R, exit"
           "$mainMod, V, togglefloating" 
