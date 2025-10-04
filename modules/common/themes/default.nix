@@ -15,8 +15,7 @@
 
   # Flatpak font compatibility
   system.fsPackages = [ pkgs.bindfs ];
- 
- environment.systemPackages = [ pkgs. adwaita-icon-theme ];
+  environment.systemPackages = [ pkgs.adwaita-icon-theme ];
 
   fileSystems = let
     mkRoSymBind = path: {
@@ -81,6 +80,11 @@
           gtk-application-prefer-dark-theme=1
         '';
       };
+    };
+    qt = {
+      enable = true;
+      platformTheme.name = "gtk";
+      style.name = "gtk2";
     };
     dconf.settings = {
       "org/gnome/desktop/background" = {

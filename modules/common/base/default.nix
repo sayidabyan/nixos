@@ -87,8 +87,10 @@
       btop
       cava
       dbeaver-bin
-      discord
-      bleeding.discord-canary
+      (pkgs.discord.override {
+        withVencord = true;
+        withOpenASAR = true;
+      })
       fastfetch
       htop
       libnotify
