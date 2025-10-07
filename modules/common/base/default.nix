@@ -109,6 +109,7 @@
       speedtest-cli
       squashfsTools
       telegram-desktop
+      trilium-desktop
       unzip
       vesktop
       xviewer
