@@ -1,5 +1,11 @@
 {config, pkgs, ...}:
 {
+  networking.interfaces."eno1".ipv4.addresses = [
+    {
+      address = "192.168.18.21";
+      prefixLength = 24;
+    }
+  ];
   # Steam
   programs.steam = {
     enable = true;

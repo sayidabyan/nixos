@@ -9,7 +9,7 @@
       fd # https://github.com/nvim-telescope/telescope.nvim#optional-dependencies
       sops
       nixpkgs-fmt
-      luaformatter
+      #luaformatter
       lua-language-server
       nixd
     ];
