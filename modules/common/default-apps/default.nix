@@ -10,7 +10,7 @@
     home.sessionVariables = {
       EDITOR = "nvim";
       BROWSER = "zen";
-      TERMINAL = "ghostty";
+      TERMINAL = "kitty";
     };
     xdg.portal = {
       enable = true;

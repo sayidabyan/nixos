@@ -13,7 +13,6 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-bleeding.url = "github:nixos/nixpkgs/master";
-    nixpkgs-custom.url = "github:sayidabyan/nixpkgs/master";
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     editor-integration-nvim = {
       url = "github:aiken-lang/editor-integration-nvim";
@@ -92,10 +91,6 @@
                       config.allowUnfree = true;
                     };
                     bleeding = import inputs.nixpkgs-bleeding {
-                      system = final.system;
-                      config.allowUnfree = true;
-                    };
-                    custom = import inputs.nixpkgs-custom {
                       system = final.system;
                       config.allowUnfree = true;
                     };

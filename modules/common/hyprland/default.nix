@@ -53,7 +53,7 @@
       enable = true;
       settings = {
         preload = [
-          "/home/sayid/nixos/bg/Japan Pond.jpg"
+          "/home/sayid/nixos/bg/Better Tomorrow.jpg"
         ];
       };
     };
@@ -66,7 +66,7 @@
         };
         background = [
           {
-            path = "/home/sayid/nixos/bg/Japan Pond.jpg";
+            path = "/home/sayid/nixos/bg/Better Tomorrow.jpg";
             blur_passes = 3;
             blur_size = 8;
           }
@@ -383,7 +383,7 @@
         ];
         
         bind = [
-          "$mainMod, T, exec, ghostty"
+          "$mainMod, T, exec, kitty"
           "$mainMod, Q, killactive" 
           # "$mainMod, R, exit"
           "$mainMod, V, togglefloating" 

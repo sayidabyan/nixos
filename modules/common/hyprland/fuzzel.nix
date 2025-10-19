@@ -6,7 +6,7 @@
       enable = true;
       settings = {
         main = {
-          terminal = "/home/sayid/.nix-profile/bin/ghostty";
+          terminal = "/home/sayid/.nix-profile/bin/kitty";
           font = "Quicksand:weight=medium:size=12";
           icon-theme = "Papirus-Dark";
         };

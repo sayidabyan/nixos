@@ -83,7 +83,6 @@
       bc
       bottom
       brave
-      custom.brave-nightly
       btop
       cava
       dbeaver-bin
@@ -127,6 +126,18 @@
     programs.direnv.enable = true;
     programs.direnv.enableZshIntegration = true;
     programs.direnv.nix-direnv.enable = true; # prevent garbage collection
+    
+    # Temporary workaround brave
+    xdg.desktopEntries = {
+      brave-browser = {
+        name = "Brave Web Browser";
+        icon = "brave-browser";
+        terminal = false;
+        type = "Application";
+        categories = ["Network" "WebBrowser"];
+        exec = "brave --disable-features=WaylandWpColorManagerV1 %U";
+      };
+    };
   };
 
   programs.appimage = {

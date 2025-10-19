@@ -200,7 +200,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_create_user_command('Clean', function()
-  vim.fn.jobstart({ 'ghostty', 'nvim', '--clean', vim.fn.expand('%:p') },
+  vim.fn.jobstart({ 'kitty', 'nvim', '--clean', vim.fn.expand('%:p') },
     { detach = true })
 end, {})
 
