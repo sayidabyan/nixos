@@ -94,6 +94,7 @@
       htop
       libnotify
       neofetch
+      nettools
       nix-prefetch-git
       nix-prefetch
       nvtopPackages.full

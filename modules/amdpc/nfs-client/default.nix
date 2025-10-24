@@ -1,31 +1,32 @@
 {...}:
 {
-  boot.supportedFilesystems = [ "nfs" ];
+  users.groups.nfs-users = {
+    gid = 2121;
+  };
+  users.users.sayid = {
+    extraGroups = [ "nfs-users" ];
+  };
   fileSystems."/mnt/Data_D" = {
-    device = "100.112.119.112:/shared";
+    device = "100.112.119.112:/media/external/shared";
     fsType = "nfs";
     options = [
       "_netdev"
-      "nofail"
       "noauto" 
       "x-systemd.automount" 
       "x-systemd.idle-timeout=600s"
       "x-systemd.device-timeout=10s"
-      "x-systemd.requires=network-online.target"
       "vers=4"
     ];
   };
   fileSystems."/mnt/Music" = {
-    device = "100.112.119.112:/music";
+    device = "100.112.119.112:/media/external/media/music";
     fsType = "nfs";
     options = [
       "_netdev"
-      "nofail"
       "noauto" 
       "x-systemd.automount" 
       "x-systemd.idle-timeout=600s"
       "x-systemd.device-timeout=10s"
-      "x-systemd.requires=network-online.target"
       "vers=4"
     ];
   };

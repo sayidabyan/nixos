@@ -194,41 +194,44 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp
 
 local defaultConfig = { on_attach = on_attach, capabilities = capabilities }
 
-require('lspconfig').lua_ls.setup(vim.tbl_extend('force', defaultConfig, {
+vim.lsp.config('lua_ls', vim.tbl_extend('force', defaultConfig, {
   settings = {
     Lua = {
-      -- format = { enable = false },
-      -- completion = { callSnippet = 'Replace' },
       diagnostics = { globals = { 'vim' } },
-      -- workspace = { checkThirdParty = false },
-      -- telemetry = { enable = false },
     },
   },
 }))
-require('lspconfig').ts_ls.setup(defaultConfig)
-require('lspconfig').html.setup(defaultConfig)
-require('lspconfig').nixd.setup(defaultConfig)
-require('lspconfig').hls.setup(defaultConfig)
-require('lspconfig').jsonls.setup(defaultConfig)
-require('lspconfig').pylsp.setup(defaultConfig)
-require('lspconfig').rust_analyzer.setup(defaultConfig)
-require('lspconfig').gopls.setup(defaultConfig)
 
-require('lspconfig').eslint.setup({
+vim.lsp.config('ts_ls', defaultConfig)
+vim.lsp.config('html', defaultConfig)
+vim.lsp.config('nixd', defaultConfig)
+vim.lsp.config('hls', defaultConfig)
+vim.lsp.config('jsonls', defaultConfig)
+vim.lsp.config('pylsp', defaultConfig)
+vim.lsp.config('rust_analyzer', defaultConfig)
+vim.lsp.config('gopls', defaultConfig)
+
+vim.lsp.config('eslint', {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = true;
+    client.server_capabilities.documentFormattingProvider = true
+    -- Assuming on_attach is a function you defined elsewhere
     on_attach(client, bufnr)
   end,
 })
 
-require'lspconfig'.aiken.setup{}
+vim.lsp.config('aiken', {})
+
+-- Set up the autocmd for Aiken formatting
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.ak",
   callback = function()
-    vim.lsp.buf.format({async = false})
+    vim.lsp.buf.format({ async = false })
   end
 })
+
+-- Apply the configurations
+vim.lsp.enable('lua_ls', 'ts_ls', 'html', 'nixd', 'hls', 'jsonls', 'pylsp', 'rust_analyzer', 'gopls', 'eslint', 'aiken')
 
 require('telescope').load_extension('file_browser')
 vim.keymap.set('n', '<leader>fm', function()

@@ -1,15 +1,20 @@
 {config, pkgs, ...}:
 {
-  networking.interfaces."eno1".ipv4.addresses = [
-    {
-      address = "192.168.18.21";
-      prefixLength = 24;
-    }
-  ];
+  networking.hostId = "427f1aeb";
+  boot.supportedFilesystems.zfs = true;
+  boot.zfs.package = pkgs.zfs_cachyos;
+  users.groups.zfs-users = {
+    gid = 1999;
+  };
+  users.users.sayid = {
+    extraGroups = [ "zfs-users" ];
+  };
+
   # Steam
   programs.steam = {
     enable = true;
     package = pkgs.steam;
+    gamescopeSession.enable = true;
   };
   programs.gamescope = {
     enable = true;
@@ -47,6 +52,7 @@
       onlyoffice-desktopeditors
       lutris
       heroic
+      sysstat
     ];
   };
   systemd.services.lactd = {
@@ -97,7 +103,5 @@
       '';
     };
   };
-
-
 }
 

@@ -53,7 +53,7 @@
       enable = true;
       settings = {
         preload = [
-          "/home/sayid/nixos/bg/Better Tomorrow.jpg"
+          "/home/sayid/nixos/bg/path less traveled.jpg"
         ];
       };
     };
@@ -66,7 +66,7 @@
         };
         background = [
           {
-            path = "/home/sayid/nixos/bg/Better Tomorrow.jpg";
+            path = "/home/sayid/nixos/bg/path less traveled.jpg";
             blur_passes = 3;
             blur_size = 8;
           }

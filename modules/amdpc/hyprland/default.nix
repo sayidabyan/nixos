@@ -5,8 +5,8 @@
     services.hyprpaper = {
       settings = {
         wallpaper = [
-          "DP-1, /home/sayid/nixos/bg/Better Tomorrow.jpg"
-          "DP-2, /home/sayid/nixos/bg/Better Tomorrow.jpg"
+          "DP-1, /home/sayid/nixos/bg/path less traveled.jpg"
+          "DP-2, /home/sayid/nixos/bg/path less traveled.jpg"
         ];
       };
     };
