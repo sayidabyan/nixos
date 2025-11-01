@@ -384,7 +384,7 @@
         
         bind = [
           "$mainMod, T, exec, kitty"
-          "$mainMod, Q, killactive" 
+          "$mainMod2, Q, killactive" 
           # "$mainMod, R, exit"
           "$mainMod, V, togglefloating" 
           "$mainMod, SPACE, exec, pkill fuzzel || fuzzel"
@@ -438,12 +438,12 @@
           "$mainMod CTRL, s, exec, hyprshot -m region -o ~/Pictures"
 
           # Lock screen
-          "$mainMod2, Q, exec, killall hyprlock; hyprlock"
+          # "$mainMod2, Q, exec, killall hyprlock; hyprlock"
         ];
         # Move/resize windows with mainMod + LMB/RMB and dragging
         bindm = [
-          "$mainMod, mouse:272, movewindow"
-          "$mainMod, mouse:273, resizewindow"
+          "$mainMod2, mouse:272, movewindow"
+          "$mainMod2, mouse:273, resizewindow"
         ];
         binde = [
           # pipewire volume control

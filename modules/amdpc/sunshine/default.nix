@@ -1,7 +1,7 @@
 {...}:
 {
   services.sunshine = {
-    enable = true;
+    enable = false;
     openFirewall = true;
   };
 }

@@ -35,10 +35,7 @@
   services.xserver.enable = true;
 
   # Enable the Desktop Environment/ Display Manager.
-  services.displayManager.gdm = {
-    enable = true;
-    autoSuspend = false;
-  };
+  services.displayManager.gdm.enable = true;
 
   # Fix Network Manager Error
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -50,9 +47,9 @@
   };
 
   # Enable android udev rules
-  services.udev.packages = [
-    pkgs.android-udev-rules
-  ];
+ # services.udev.packages = [
+ #   pkgs.android-udev-rules
+ # ];
   
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -90,6 +87,7 @@
         withVencord = true;
         withOpenASAR = true;
       })
+      dnsutils
       fastfetch
       htop
       libnotify
@@ -137,6 +135,17 @@
         type = "Application";
         categories = ["Network" "WebBrowser"];
         exec = "brave --disable-features=WaylandWpColorManagerV1 %U";
+      };
+      t3chat = {
+        name = "T3chat";
+        icon = "/home/sayid/nixos/icons/t3chat.svg";
+        terminal = false;
+        type = "Application";
+        categories = ["Application"];
+        exec = "brave --disable-features=WaylandWpColorManagerV1 %U --app=https://t3.chat";
+        settings = {
+          StartupWMClass="T3chat";
+        };
       };
     };
   };
