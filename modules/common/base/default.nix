@@ -95,7 +95,7 @@
       nettools
       nix-prefetch-git
       nix-prefetch
-      nvtopPackages.full
+      nvtopPackages.amd
       p7zip
       parsec-bin
       pavucontrol
@@ -103,11 +103,8 @@
       qbittorrent
       rhythmbox
       scrcpy
-      siyuan
       speedtest-cli
-      squashfsTools
       telegram-desktop
-      trilium-desktop
       unzip
       vesktop
       xviewer
