@@ -194,14 +194,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp
 
 local defaultConfig = { on_attach = on_attach, capabilities = capabilities }
 
-vim.lsp.config('lua_ls', vim.tbl_extend('force', defaultConfig, {
-  settings = {
-    Lua = {
-      diagnostics = { globals = { 'vim' } },
-    },
-  },
-}))
-
+vim.lsp.config('lua_ls', defaultConfig)
 vim.lsp.config('ts_ls', defaultConfig)
 vim.lsp.config('html', defaultConfig)
 vim.lsp.config('nixd', defaultConfig)
@@ -210,28 +203,21 @@ vim.lsp.config('jsonls', defaultConfig)
 vim.lsp.config('pylsp', defaultConfig)
 vim.lsp.config('rust_analyzer', defaultConfig)
 vim.lsp.config('gopls', defaultConfig)
-
-vim.lsp.config('eslint', {
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = true
-    -- Assuming on_attach is a function you defined elsewhere
-    on_attach(client, bufnr)
-  end,
-})
-
-vim.lsp.config('aiken', {})
-
--- Set up the autocmd for Aiken formatting
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.ak",
-  callback = function()
-    vim.lsp.buf.format({ async = false })
-  end
-})
+vim.lsp.config('eslint', defaultConfig)
+vim.lsp.config('aiken', defaultConfig)
 
 -- Apply the configurations
-vim.lsp.enable('lua_ls', 'ts_ls', 'html', 'nixd', 'hls', 'jsonls', 'pylsp', 'rust_analyzer', 'gopls', 'eslint', 'aiken')
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('html')
+vim.lsp.enable('nixd')
+vim.lsp.enable('hls')
+vim.lsp.enable('jsonls')
+vim.lsp.enable('pylsp')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('gopls')
+vim.lsp.enable('eslint')
+vim.lsp.enable('aiken')
 
 require('telescope').load_extension('file_browser')
 vim.keymap.set('n', '<leader>fm', function()
@@ -271,4 +257,16 @@ cmp.setup({
       end
     end),
   },
+})
+
+-- Create an autocmd group
+vim.api.nvim_create_augroup("FormatOnSave", { clear = true })
+
+-- Enable format on save for Python files
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = "FormatOnSave",
+  pattern = "*.py",
+  callback = function()
+    vim.lsp.buf.format()
+  end,
 })

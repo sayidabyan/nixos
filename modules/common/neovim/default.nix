@@ -13,7 +13,7 @@
       lua-language-server
       nixd
     ];
-
+  
     programs.neovim.enable = true;
     programs.neovim.viAlias = true;
     programs.neovim.vimAlias = true;
@@ -38,6 +38,7 @@
       nvim-lspconfig
       nvim-treesitter-textobjects
       nvim-treesitter.withAllGrammars
+      nvim-web-devicons
       lspkind-nvim
       luasnip
       editor-integration-nvim
@@ -251,14 +252,14 @@
           })
         '';
       }
-      {
-        plugin = vim-auto-save;
-        type = "lua";
-        config = ''
-          vim.g.auto_save = 1
-          vim.g.auto_save_silent = 1
-        '';
-      }
+     # {
+     #   plugin = vim-auto-save;
+     #   type = "lua";
+     #   config = ''
+     #     vim.g.auto_save = 1
+     #     vim.g.auto_save_silent = 1
+     #   '';
+     # }
       {
         plugin = toggleterm-nvim;
         type = "lua";
@@ -340,16 +341,34 @@
         type = "lua";
       }
       {
-        plugin = copilot-lua;
-        config = "require('copilot').setup({
-                    suggestion = { enabled = false },
-                    panel = { enabled = false },
-                  })";
+        plugin = conform-nvim;
+        config = ''
+          require("conform").setup({
+            formatters_by_ft = {
+              -- Conform will run multiple formatters sequentially
+              python = { "ruff" },
+            },
+            format_on_save = {
+              -- These options will be passed to conform.format()
+              timeout_ms = 500,
+              lsp_format = "fallback",
+            },
+          })
+        '';
         type = "lua";
       }
       {
-        plugin = copilot-cmp;
-        config = "require('copilot_cmp').setup()";
+        plugin = nvim-lint;
+        config = ''
+          require("lint").linters_by_ft = {
+            python = { "ruff" }
+          }
+          vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
+	    callback = function()
+	    require("lint").try_lint()
+            end,
+          })
+        '';
         type = "lua";
       }
     ];

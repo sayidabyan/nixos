@@ -119,7 +119,7 @@
           };
         };
         bar = {
-          autoHide = "fullscreen";
+          autoHide = "never";
           layer = "top";
           location = "top";
           launcher.icon = "󱄅";
