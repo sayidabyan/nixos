@@ -1,8 +1,8 @@
 {config, pkgs, ...}:
 {
-  networking.hostId = "427f1aeb";
-  boot.supportedFilesystems.zfs = true;
-  boot.zfs.package = pkgs.zfs_cachyos;
+  #networking.hostId = "427f1aeb";
+  #boot.supportedFilesystems.zfs = true;
+  #boot.zfs.package = pkgs.zfs_cachyos;
   users.groups.zfs-users = {
     gid = 1999;
   };
