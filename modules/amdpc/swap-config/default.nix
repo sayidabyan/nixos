@@ -1,8 +1,14 @@
 {...}:
-
 {
+
   swapDevices = [ {
     device = "/var/lib/swapfile";
-      size = 64*1024;
+      size = 16*1024;
   } ];
+
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 25;
+  };
 }

@@ -47,8 +47,6 @@
       mangohud
       protonplus
       steam-rom-manager
-      unigine-heaven
-      unigine-superposition
       onlyoffice-desktopeditors
       heroic
       sysstat
