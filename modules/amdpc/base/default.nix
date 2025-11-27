@@ -15,12 +15,27 @@
     enable = true;
     package = pkgs.steam;
     gamescopeSession.enable = true;
+    gamescopeSession.args = [
+      "--prefer-output DP-1"
+    ];
   };
   programs.gamescope = {
     enable = true;
     package = pkgs.gamescope.overrideAttrs (_: {
       NIX_CFLAGS_COMPILE = ["-fno-fast-math"];
     });
+  };
+  services.sunshine = {
+    enable = true;
+    openFirewall = true;
+    applications.apps = [
+      {
+        name = "Steam Gamescope";
+        detached = [
+          "${pkgs.gamescope}/bin/gamescope -e -f -h 1440 --prefer-output=DP-1 -- ${pkgs.steam}/bin/steam -gamepadui"
+        ];
+      }
+    ];
   };
 
   boot.kernelParams = [ 
