@@ -141,6 +141,15 @@
           StartupWMClass="T3chat";
         };
       };
+      steam-gamescope = {
+        name = "Steam Gamescope";
+        comment = "Launch Steam in Gamescope";
+        exec = "gamescope -e -f -h 1440 -r 144 --prefer-output=DP-1 -- steam -gamepadui";
+        icon = "steam";
+        type = "Application";
+        terminal = false;
+        categories = [ "Game" ];
+      };
     };
   };
 
