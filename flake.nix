@@ -86,15 +86,15 @@
                 nixpkgs.overlays = [
                   (final: prev: {
                     stable = import inputs.nixpkgs-stable {
-                      system = final.system;
+                      system = final.stdenv.hostPlatform.system;
                       config.allowUnfree = true;
                     };
                     unstable = import inputs.nixpkgs-unstable {
-                      system = final.system;
+                      system = final.stdenv.hostPlatform.system;
                       config.allowUnfree = true;
                     };
                     bleeding = import inputs.nixpkgs-bleeding {
-                      system = final.system;
+                      system = final.stdenv.hostPlatform.system;
                       config.allowUnfree = true;
                     };
                     vimPlugins =
