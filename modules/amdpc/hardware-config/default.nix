@@ -32,6 +32,12 @@
     fsType = "ext4";
     options = [  "users" "nofail" "exec"];
   };
+
+  fileSystems."/mnt/archive" = {
+    device = "/dev/disk/by-id/ata-ST4000LM016-1N2170_W8025LYA-part1";
+    fsType = "ext4";
+    options = [  "users" "nofail" "exec"];
+  };
  
   swapDevices = [ ];
 

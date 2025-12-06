@@ -10,21 +10,6 @@
     extraGroups = [ "zfs-users" ];
   };
 
-  # Steam
-  programs.steam = {
-    enable = true;
-    package = pkgs.steam;
-    gamescopeSession.enable = true;
-    gamescopeSession.args = [
-      "--prefer-output DP-1"
-    ];
-  };
-  programs.gamescope = {
-    enable = true;
-    package = pkgs.gamescope.overrideAttrs (_: {
-      NIX_CFLAGS_COMPILE = ["-fno-fast-math"];
-    });
-  };
   boot.kernelParams = [ 
     "amdgpu.ppfeaturemask=0xffffffff" # enable radeon oc control(?)
     # fix nic/ethernet issue (?)

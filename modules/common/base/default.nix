@@ -7,9 +7,9 @@
 {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
-  ];
+ # boot.extraModulePackages = with config.boot.kernelPackages; [
+ #   v4l2loopback
+ # ];
   security.polkit.enable = true;
 
   networking.hostName = "nixos-${device}"; # Define your hostname.
@@ -140,15 +140,6 @@
         settings = {
           StartupWMClass="T3chat";
         };
-      };
-      steam-gamescope = {
-        name = "Steam Gamescope";
-        comment = "Launch Steam in Gamescope";
-        exec = "gamescope -e -f -h 1440 -r 144 --prefer-output=DP-1 -- steam -gamepadui";
-        icon = "steam";
-        type = "Application";
-        terminal = false;
-        categories = [ "Game" ];
       };
     };
   };
