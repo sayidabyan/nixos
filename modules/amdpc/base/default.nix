@@ -31,11 +31,7 @@
     home.packages = with pkgs; [
       cider-2
       lact
-      mangohud
-      protonplus
-      steam-rom-manager
       onlyoffice-desktopeditors
-      heroic
       sysstat
       vscodium
     ];
