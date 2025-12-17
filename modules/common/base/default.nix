@@ -101,7 +101,6 @@
       rhythmbox
       scrcpy
       speedtest-cli
-      telegram-desktop
       unzip
       vesktop
       xviewer

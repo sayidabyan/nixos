@@ -11,7 +11,7 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/release-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-bleeding.url = "github:nixos/nixpkgs/master";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     editor-integration-nvim = {
       url = "github:aiken-lang/editor-integration-nvim";
       flake = false;
@@ -40,7 +40,7 @@
           nur = inputs.nur;
           lib = nixpkgs.lib;
           nix-flatpak = inputs.nix-flatpak;
-          chaotic = inputs.chaotic;
+          # chaotic = inputs.chaotic;
           apollo = inputs.apollo;
           modulesInDir = dir: (lib.trivial.pipe dir [
             builtins.readDir
@@ -76,7 +76,7 @@
               nur.modules.nixos.default
               home-manager.nixosModules.home-manager
               nix-flatpak.nixosModules.nix-flatpak 
-              chaotic.nixosModules.default
+              # chaotic.nixosModules.default
               apollo.nixosModules.${system}.default
               {
 
