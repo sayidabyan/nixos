@@ -94,7 +94,6 @@
       nix-prefetch
       nvtopPackages.amd
       p7zip
-      parsec-bin
       pavucontrol
       pfetch
       qbittorrent

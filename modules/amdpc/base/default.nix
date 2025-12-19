@@ -30,6 +30,7 @@
   home-manager.users.sayid = {...}: {
     home.packages = with pkgs; [
       cider-2
+      darktable
       lact
       onlyoffice-desktopeditors
       sysstat
