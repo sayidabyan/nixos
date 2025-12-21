@@ -10,6 +10,7 @@
     services.flatpak.packages = [
       "com.github.tchx84.Flatseal"
       "io.github.celluloid_player.Celluloid"
+      "io.github.kolunmi.Bazaar"
     ];
   };
 }

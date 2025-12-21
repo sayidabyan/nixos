@@ -11,7 +11,6 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/release-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-bleeding.url = "github:nixos/nixpkgs/master";
-    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     editor-integration-nvim = {
       url = "github:aiken-lang/editor-integration-nvim";
       flake = false;
@@ -21,7 +20,6 @@
       flake = false;
     };
     zen-browser.url = "github:youwen5/zen-browser-flake";
-    apollo.url = "github:nil-andreas/apollo-flake";
     apple-silicon-support.url = "github:zzywysm/nixos-asahi";
     nur = {
       url = "github:nix-community/NUR";
