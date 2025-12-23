@@ -74,6 +74,7 @@
   home-manager.users.sayid = { pkgs, ... }: {
     home.packages = with pkgs; [
       aiken
+      bazaar
       bc
       bottom
       brave

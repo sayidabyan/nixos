@@ -29,17 +29,13 @@
   };
   outputs = inputs:
     let
-      buildSystem = builtins.mapAttrs (device: cfg:
+      buildSystem = builtins.mapAttrs (device: modules:
         let
-          system = cfg.system;
-          modules = cfg.modules;
           nixpkgs = inputs.nixpkgs;
           home-manager = inputs.home-manager;
           nur = inputs.nur;
           lib = nixpkgs.lib;
           nix-flatpak = inputs.nix-flatpak;
-          # chaotic = inputs.chaotic;
-          apollo = inputs.apollo;
           modulesInDir = dir: (lib.trivial.pipe dir [
             builtins.readDir
             (lib.attrsets.filterAttrs (key: val: val == "directory"))
@@ -62,25 +58,13 @@
                   registry.nixpkgs.flake = nixpkgs;
                   settings.experimental-features = [ "nix-command" "flakes" ];
                 };
-                # Required for nixos-rebuild with flakes
                 environment.systemPackages = [ pkgs.git ];
               })
-              {
-               # nix.settings = {
-               #   substituters = [ "https://cosmic.cachix.org/" ];
-               #   trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-               # };
-              }
               nur.modules.nixos.default
               home-manager.nixosModules.home-manager
               nix-flatpak.nixosModules.nix-flatpak 
-              # chaotic.nixosModules.default
-              apollo.nixosModules.${system}.default
               {
-
-                # make `nix run nixpkgs#nixpkgs` use the same nixpkgs as the one used by this flake.
                 nix.registry.nixpkgs.flake = inputs.nixpkgs;
-
                 nixpkgs.overlays = [
                   (final: prev: {
                     stable = import inputs.nixpkgs-stable {
@@ -115,28 +99,19 @@
     in
     {
       nixosConfigurations = buildSystem {
-        um790 = {
-          system = "x86_64-linux";
-          modules = [
-            inputs.nixos-hardware.nixosModules.common-gpu-amd
-            inputs.nixos-hardware.nixosModules.common-cpu-amd
-            inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
-          ];
-        };
-        amdpc = {
-          system = "x86_64-linux";
-          modules = [
-            inputs.nixos-hardware.nixosModules.common-cpu-amd
-            inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
-          ];
-        };
-        mbam2 = {
-          system = "aarch64-linux";  # <- arm / Apple Silicon
-          modules = [
-            inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
-            inputs.apple-silicon-support.nixosModules.default
-          ];
-        };
+        um790 = [
+          inputs.nixos-hardware.nixosModules.common-gpu-amd
+          inputs.nixos-hardware.nixosModules.common-cpu-amd
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+        ];
+        amdpc = [
+          inputs.nixos-hardware.nixosModules.common-cpu-amd
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+        ];
+        mbam2 = [
+          inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
+          inputs.apple-silicon-support.nixosModules.default
+        ];
       };
     };
 }

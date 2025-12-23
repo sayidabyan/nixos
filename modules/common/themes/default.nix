@@ -28,7 +28,6 @@
         paths = config.fonts.packages ++ (with pkgs; [
           # Add your cursor themes and icon packages here
           bibata-cursors
-          # etc.
         ]);
         pathsToLink = [ "/share/fonts" "/share/icons" ];
     };
