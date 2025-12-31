@@ -80,11 +80,6 @@
       brave
       btop
       cava
-      dbeaver-bin
-      (pkgs.discord.override {
-        withVencord = true;
-        withOpenASAR = true;
-      })
       dnsutils
       fastfetch
       htop
