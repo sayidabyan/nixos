@@ -56,5 +56,4 @@
     ATTRS{name}=="DualSense Wireless Controller Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="1"
   '';
 
-  # services.desktopManager.plasma6.enable = true;
 }

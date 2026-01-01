@@ -305,11 +305,11 @@
         type = "lua";
       }
 
-      {
-        plugin = leap-nvim;
-        config = "require('leap').add_default_mappings()";
-        type = "lua";
-      }
+     # {
+     #   plugin = leap-nvim;
+     #   config = "require('leap').add_default_mappings()";
+     #   type = "lua";
+     # }
 
       {
         plugin = comment-nvim;

@@ -79,6 +79,7 @@
       bottom
       brave
       btop
+      calibre
       cava
       dnsutils
       fastfetch
@@ -89,7 +90,10 @@
       nix-prefetch-git
       nix-prefetch
       nvtopPackages.amd
+      obsidian
+      opencode
       p7zip
+      parsec-bin
       pavucontrol
       pfetch
       qbittorrent
@@ -126,7 +130,7 @@
       };
       t3chat = {
         name = "T3chat";
-        icon = "/home/sayid/nixos/icons/t3chat.svg";
+        icon = "/home/sayid/nixos/icons/t3chat.png";
         terminal = false;
         type = "Application";
         categories = ["Application"];
