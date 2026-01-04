@@ -23,6 +23,8 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    package = pkgs.unstable.mesa;
+    package32 = pkgs.unstable.pkgsi686Linux.mesa;
   };
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
@@ -55,5 +57,4 @@
     # Bluetooth
     ATTRS{name}=="DualSense Wireless Controller Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="1"
   '';
-
 }

@@ -27,9 +27,5 @@
         };
       };
     };
-
-    wayland.windowManager.hyprland.settings.layerrule = [
-      "blur, launcher"
-    ];
   };
 }

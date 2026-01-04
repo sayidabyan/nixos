@@ -30,10 +30,10 @@
     ];
     env = {
       PROTON_FSR4_UPGRADE="1";
-      MANGOHUD="1";
+      # MANGOHUD="1";
     };
   };
-  boot.extraModulePackages = [ pkgs.linuxKernel.packages.linux_6_18.zenergy ];
+  boot.extraModulePackages = [ pkgs.linuxKernel.packages.linux_6_18.zenergy pkgs.linuxKernel.packages.linux_6_18.hid-tmff2];
   programs.java = {
     enable = true;
     package = pkgs.jdk8;
