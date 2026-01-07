@@ -7,7 +7,10 @@
     enable = true;
     dockerCompat = true;
     defaultNetwork.settings.dns_enabled = true;
+    dockerSocket.enable = true;
   };
+  virtualisation.oci-containers.backend = "podman";
+
   users.users.sayid = {
     extraGroups = [ "podman" ];
   };

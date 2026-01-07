@@ -42,6 +42,7 @@
     home.packages = with pkgs; [
       mangohud
       mangojuice
+      moonlight-qt
       protonplus
       steam-rom-manager
       heroic
