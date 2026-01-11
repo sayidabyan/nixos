@@ -47,8 +47,6 @@
       steam-rom-manager
       heroic
       prismlauncher
-      unstable.rpcs3
-      unstable.pcsx2
     ];
     xdg.desktopEntries = {
       steam-gamescope = {
