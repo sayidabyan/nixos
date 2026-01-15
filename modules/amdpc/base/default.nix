@@ -37,6 +37,7 @@
       onlyoffice-desktopeditors
       sysstat
       vscodium
+      linuxKernel.packages.linux_6_18.turbostat
     ];
   };
   systemd.services.lactd = {

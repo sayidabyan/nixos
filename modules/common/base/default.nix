@@ -91,7 +91,7 @@
       nix-prefetch
       nvtopPackages.amd
       obsidian
-      opencode
+      unstable.opencode
       p7zip
       parsec-bin
       pavucontrol
