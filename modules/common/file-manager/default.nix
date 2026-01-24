@@ -1,18 +1,17 @@
-{...}:
+{pkgs, ...}:
 {
-  services.devmon.enable = true;
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
+  programs.xfconf.enable = true;
+  services.tumbler.enable = true;
   services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  programs.gnome-disks.enable = true;
   home-manager.users.sayid = {pkgs, ...}: {
     home.packages = with pkgs; [
-      nemo-with-extensions
+      file-roller
     ];
-
-    dconf.settings = {
-      "org/cinnamon/desktop/applications/terminal" = {
-        exec = "kitty";
-      };
-    };
+    home.file.".config/xfce4/helpers.rc".text = "TerminalEmulator=kitty";
   };
 }
