@@ -120,14 +120,14 @@
     
     # Temporary workaround brave
     xdg.desktopEntries = {
-      brave-browser = {
-        name = "Brave Web Browser";
-        icon = "brave-browser";
-        terminal = false;
-        type = "Application";
-        categories = ["Network" "WebBrowser"];
-        exec = "brave --disable-features=WaylandWpColorManagerV1 %U";
-      };
+     # brave-browser = {
+     #   name = "Brave Web Browser";
+     #   icon = "brave-browser";
+     #   terminal = false;
+     #   type = "Application";
+     #   categories = ["Network" "WebBrowser"];
+     #   exec = "brave --disable-features=WaylandWpColorManagerV1 %U";
+     # };
       t3chat = {
         name = "T3chat";
         icon = "/home/sayid/nixos/icons/t3chat.png";
