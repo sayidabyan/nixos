@@ -465,11 +465,15 @@
         ];
         windowrulev2 = [
           # "float,class:^(steam)$"
-          "float,class:^(nemo)$"
+          "float,class:^(thunar)$"
           "float,class:^(org.pulseaudio.pavucontrol)$"
           "float,class:^(.blueman-manager-wrapped)$"
           "fullscreen,class:^steam_app\d+$"
           "monitor 0,class:^steam_app_\d+$"
+          "float, title:^(Picture-in-Picture)$"
+          "pin, title:^(Picture-in-Picture)$"
+          "size 320 180, title:^(Picture-in-Picture)$"
+          "move 100%-335 100%-225, title:^(Picture-in-Picture)$"
         ];
         layerrule = [
           "blur, bar-.*"

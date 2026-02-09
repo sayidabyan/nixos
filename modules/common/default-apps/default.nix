@@ -35,8 +35,8 @@
         "image/jpeg" = "xviewer.desktop";
         "image/webp" = "xviewer.desktop";
         "image/gif" = "xviewer.desktop";
-        "inode/directory" = [ "nemo.desktop" ];
-        "application/x-gnome-saved-search" = [ "nemo.desktop" ];
+        "inode/directory" = [ "thunar.desktop" ];
+        "application/x-gnome-saved-search" = [ "thunar.desktop" ];
         "video/x-matroska" =["io.github.celluloid_player.Celluloid.desktop"];
         "video/mp4" = ["io.github.celluloid_player.Celluloid.desktop"];
       };
