@@ -58,6 +58,14 @@
         terminal = false;
         categories = [ "Game" ];
       };
+     # steam = {
+     #   name = "Steam";
+     #   exec = "steam -silent";
+     #   icon = "steam";
+     #   type = "Application";
+     #   terminal = false;
+     #   categories = [ "Game" ];
+     # };
       minecraft = {
         name = "minecraft";
         type = "Application";

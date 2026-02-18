@@ -120,13 +120,14 @@
     
     # Temporary workaround brave
     xdg.desktopEntries = {
-     # brave-browser = {
-     #   name = "Brave Web Browser";
-     #   icon = "brave-browser";
+     # element-desktop = {
+     #   name = "Element";
+     #   icon = "element-desktop";
      #   terminal = false;
      #   type = "Application";
-     #   categories = ["Network" "WebBrowser"];
-     #   exec = "brave --disable-features=WaylandWpColorManagerV1 %U";
+     #   categories = ["Network" "InstantMessaging" "Chat"];
+     #   comment = "Feature-rich client for Matrix.org";
+     #   exec = "element-desktop --password-store=gnome-libsecret %U";
      # };
       t3chat = {
         name = "T3chat";
@@ -151,6 +152,8 @@
     enable = true;
   };
 
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
