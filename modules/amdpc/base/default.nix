@@ -9,6 +9,12 @@
   users.users.sayid = {
     extraGroups = [ "zfs-users" ];
   };
+  
+  boot.loader.systemd-boot.windows."windows" = {
+    title = "Windows";
+    efiDeviceHandle = "FS1";
+    sortKey = "y_windows";
+  };
 
   boot.kernelParams = [ 
     "amdgpu.ppfeaturemask=0xffffffff" # enable radeon oc control(?)

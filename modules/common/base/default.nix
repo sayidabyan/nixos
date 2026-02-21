@@ -152,8 +152,8 @@
     enable = true;
   };
 
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.gdm.enableGnomeKeyring = true;
+ # services.gnome.gnome-keyring.enable = true;
+ # security.pam.services.gdm.enableGnomeKeyring = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
