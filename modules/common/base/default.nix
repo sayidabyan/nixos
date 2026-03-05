@@ -105,6 +105,7 @@
       xviewer
       yazi
       yt-dlp
+      zellij
     ];
     home.username = "sayid";
     home.homeDirectory = "/home/sayid";
