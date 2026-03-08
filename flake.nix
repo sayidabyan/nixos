@@ -112,6 +112,9 @@
           inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
           inputs.apple-silicon-support.nixosModules.default
         ];
+        xps13 = [
+          inputs.nixos-hardware.nixosModules.dell-xps-13-9370
+        ];
       };
     };
 }

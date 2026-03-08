@@ -5,20 +5,11 @@
     services.hyprpaper = {
       settings = {
         wallpaper = [
-          "eDP-1, /home/sayid/nixos/bg/Path Less Traveled.jpg"
+          "eDP-1, /home/sayid/nixos/bg/path less traveled.jpg"
         ];
       };
     };
-
-
-    programs.waybar = {
-      settings = {
-        battery = {
-          bat = "BAT0";
-        };
-      };
-    };
-
+    programs.hyprpanel.settings.bar.layouts."*".right = ["systray" "media" "volume" "network" "bluetooth" "battery" "clock" "notifications"];
     wayland.windowManager.hyprland = {
       settings = {
         monitor = [
@@ -27,11 +18,6 @@
 
         "$mainMod" = "ALT";
         "$mainMod2" = "SUPER";
-
-        render = {
-          explicit_sync = 0;
-          explicit_sync_kms = 0;
-        };
       };
     };
   };

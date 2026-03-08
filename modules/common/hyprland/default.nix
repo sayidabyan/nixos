@@ -115,7 +115,6 @@
           "*" = {
             left = ["dashboard" "windowtitle"];
             middle = ["workspaces"];
-            right = [ "systray" "media" "volume" "network" "bluetooth" "clock" "notifications"];
           };
         };
         bar = {

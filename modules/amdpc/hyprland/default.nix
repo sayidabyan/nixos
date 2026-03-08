@@ -10,6 +10,7 @@
         ];
       };
     };
+    programs.hyprpanel.settings.bar.layouts."*".right = ["systray" "media" "volume" "network" "bluetooth"  "clock" "notifications"];
     wayland.windowManager.hyprland = {
       settings = {
         monitor = [
