@@ -7,6 +7,8 @@
 {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  boot.supportedFilesystems.exfat = true;
+
  # boot.extraModulePackages = with config.boot.kernelPackages; [
  #   v4l2loopback
  # ];
