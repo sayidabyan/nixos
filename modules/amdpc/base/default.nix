@@ -9,7 +9,9 @@
   users.users.sayid = {
     extraGroups = [ "zfs-users" ];
   };
-  
+ 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   boot.loader.systemd-boot.windows."windows" = {
     title = "Windows";
     efiDeviceHandle = "FS1";
@@ -43,7 +45,6 @@
       onlyoffice-desktopeditors
       sysstat
       vscodium
-      linuxKernel.packages.linux_6_18.turbostat
     ];
   };
   systemd.services.lactd = {
