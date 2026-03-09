@@ -305,12 +305,16 @@
           touchpad = {
             natural_scroll = "1";
             scroll_factor = "0.1";
-            tap-to-click = false;
-            tap-and-drag = false;
+            tap-to-click = true;
+            tap-and-drag = true;
             clickfinger_behavior = true;
             disable_while_typing = true;
           };
         };
+
+        gesture = [ 
+          "3, horizontal, workspace"
+        ];
 
         cursor = {
           enable_hyprcursor = true;
@@ -371,17 +375,6 @@
           preserve_split = true;
         };
           
-        workspace = [
-          "1, monitor:DP-1, persistent:true"
-          "2, monitor:DP-1, persistent:true"
-          "3, monitor:DP-1, persistent:true"
-          "4, monitor:DP-1, persistent:true"
-          "5, monitor:DP-2, persistent:true"
-          "6, monitor:DP-2, persistent:true"
-          "7, monitor:DP-2, persistent:true"
-          "8, monitor:DP-2, persistent:true"
-        ];
-        
         bind = [
           "$mainMod, T, exec, kitty"
           "$mainMod2, Q, killactive" 
